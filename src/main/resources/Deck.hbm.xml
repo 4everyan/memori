@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ru.memori.model">
+
+	<class name="Deck" table="DECKS">
+		<id name="id" column="DECK_ID" type="long">
+			<generator class="native" />
+		</id>
+		<property name="title" column="DECK_TITLE" type="string" not-null="true" />
+		<property name="description" column="DECK_DESC" type="text" />
+		<many-to-one name="user" class="User" column="USER_ID" not-null="true" />
+		<set name="cards" table="CARDS" inverse="true">
+			<key column="DECK_ID" />
+			<one-to-many class="Card" />
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,9 @@
+.flashcard {
+  border-top: 1px solid #fff6dd;
+  border-bottom: 1px solid #fff4d2;
+  /*background-image: linear-gradient(to bottom, #fcdfbd 0%, #ffe8c6 20%, #fdebc7 100%);*/
+  /*background-image: linear-gradient(to bottom, #fde6cb 0%, #feecd0 20%, #fdf0d7 100%);*/
+  background: url(../images/polish-wood.png) no-repeat;
+  background-size: cover;
+  box-shadow: 0px 7px 5px #c6b299;
+}

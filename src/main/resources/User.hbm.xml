@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ru.memori.model">
+
+	<class name="User" table="USERS">
+		<id name="id" column="USER_ID" type="long">
+			<generator class="native" />
+		</id>
+		<property name="name" column="USER_NAME" type="string" not-null="true" />
+		<property name="passwordHash" column="USER_PASS" type="string" not-null="true" />
+		<property name="authorities" column="USER_ROLES" type="string" not-null="true" />
+		
+		<set name="decks" table="DECKS" inverse="true">
+			<key column="USER_ID" />
+			<one-to-many class="Deck" />
+		</set>
+	</class>
+</hibernate-mapping>

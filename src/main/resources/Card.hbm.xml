@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ru.memori.model">
+
+	<class name="Card" table="CARDS">
+		<id name="id" column="CARD_ID" type="long">
+			<generator class="native" />
+		</id>
+		<property name="question" column="CARD_QUESTION" type="string" not-null="true" />
+		<property name="answer" column="CARD_ANSWER" type="string" not-null="true" />
+		<property name="lastTime" column="CARD_LAST_TIME" type="timestamp" />
+		<property name="nextTime" column="CARD_NEXT_TIME" type="timestamp" />
+		<property name="views" column="CARD_VIEWS" type="integer" />
+		<property name="stage" column="CARD_STAGE" type="integer" />
+		<property name="state" column="CARD_STATE" type="integer" />
+		<many-to-one name="deck" class="Deck" column="DECK_ID" not-null="true" />
+	</class>
+</hibernate-mapping>

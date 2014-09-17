@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic,cyrillic-ext);
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /*background: url(../images/subtle-pattern-body-bg.jpg) repeat;*/
+  /*background: url(../images/light-carpet.png) repeat;*/
+}
+
+.navbar {
+  /*background: -moz-linear-gradient(top, #fbf7f2 0%, #fbf7f2 90%, #f1ece4 100%);
+  background: -webkit-linear-gradient(top, #fbf7f2 0%, #fbf7f2 90%, #f1ece4 100%);
+  background: -o-linear-gradient(top, #fbf7f2 0%, #fbf7f2 90%, #f1ece4 100%);
+  background: -ms-linear-gradient(top, #fbf7f2 0%, #fbf7f2 90%, #f1ece4 100%);
+  background: linear-gradient(top, #fbf7f2 0%, #fbf7f2 90%, #f1ece4 100%);
+  box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #dad6c9;*/
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.flashcard-old {
+  /*border-top: 1px solid #fff6dd;*/
+  /*border-bottom: 1px solid #fff4d2;*/
+  background: url(../images/polish-wood.png) no-repeat;
+  background-size: cover;
+  background: #f6f3ef;
+  /*box-shadow: 1px 3px 12px #c6b299;*/
+  box-shadow: 1px 3px 12px #c6c6c6;
+  /*border: 1px solid #b6a696;*/
+  min-height: 150px;
+}
+
+.flashcard {
+  border: 1px solid #d1bd9a;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.15);
+  min-height: 150px;
+}
+
+.flashcard-inner {
+  /*border: 1px solid #fffefe;*/
+  /*border-radius: 5px;*/
+  background: url(../images/paper-background.jpg) no-repeat;
+  background-size: cover;
+  /*background: #f6f3ef;*/
+  min-height: 150px;
+}
+
+.flashcard h1 {
+  font-family: 'Roboto Slab';
+  color: rgba(76, 48, 36, 0.7);
+  text-shadow: 0px 1px 1px rgba(255,255,255,0.5);
+}
+
+.flippable {
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.not-flipped {
+  -webkit-transform: perspective(1024px) rotateX(0deg);
+          transform: perspective(1024px) rotateX(0deg);
+}
+
+.back-flipped {
+  -webkit-transform: perspective(1024px) rotateX(180deg);
+          transform: perspective(1024px) rotateX(180deg);
+}
+
+.front-flipped {
+  -webkit-transform: perspective(1024px) rotateX(-180deg);
+          transform: perspective(1024px) rotateX(-180deg);
+}
+
+.statussidebar {
+  font-size: smaller;
+}
+
+@media (min-width: 320px) {
+  .flashcard {
+  }
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  .flashcard {
+    width: 0;
+    min-width: 400px;
+  }
+
+  .statussidebar {
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="userDao" class="ru.memori.database.UserDaoImpl" />
+	<bean id="userService" class="ru.memori.service.GenericUserService" />
+	
+	<bean id="deckDao" class="ru.memori.database.DeckDaoImpl" />
+	<bean id="deckService" class="ru.memori.service.GenericDeckService" />
+	
+	<bean id="cardDao" class="ru.memori.database.CardDaoImpl" />
+	<bean id="cardService" class="ru.memori.service.GenericCardService" />
+</beans>
